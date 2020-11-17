@@ -1,0 +1,114 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Courier New', Courier, monospace;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(hsla(50deg, 80%, 50%, .5), hsla(50deg, 80%, 50%, 1)), url(../media/survey-form--pexels-startup-stock-photos-7096.jpg);
+  opacity: .6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  min-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+#navbar {
+  position: sticky;
+  top: 0;
+  margin: 0px;
+  z-index: 1;
+  background-image: inherit;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+#welcome-section h1 {
+  font-size: 4em;
+  justify-self: center;
+  align-self: center;
+}
+#projects {
+  text-align: center;
+}
+#projects > div {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  grid-gap: 10px;
+  margin: 10px;
+}
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+h3, h4 {
+  font-size: 1.4em;
+  display: inline-block;
+}
+h3 {
+  margin: 20px 15px;
+  margin-bottom: 10px;
+}
+h4 {
+  margin: 20px 15px;
+  margin-top: 10px;
+}
+#navbar a, #profile-link, .project-tile a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(0, 110, 255);
+  text-decoration: none;
+}
+#navbar a:hover, #profile-link, .project-tile a {
+  text-decoration: underline;
+}
+#navbar a:active, #profile-link {
+  animation-name: flash;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes flash {
+  0% {
+    background-color: rgba(0, 128, 0, 0);
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: rgba(0, 128, 0, 0);
+  }
+}
+.project-tile a {
+  font-size: 1.15rem;
+}
+@media (max-width: 800px) {
+  #projects > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-tile {
+    border: none;
+    border-top: 1px solid gray;
+  }
+}

@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribute Page</title>
+  <style>
+    body  {
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 1.1em;
+      line-height: 1.8em;
+      background-color: #f3f3f3;
+    }
+    #main {
+      margin: 10px auto;
+      width: 95%;
+      text-align: center;
+    }
+    #title {
+      margin: 20px auto;
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #img-div {
+      margin: 30px auto !important;
+      padding: 10px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: white;
+    }
+    #image {
+      display: block;
+      align-self: center;
+      max-width: 80%;
+    }
+    #img-caption {
+      margin: 10px auto;
+    }
+    #tribute-info > p {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 30px auto;
+    }
+    #tribute-info > ul {
+      text-align: start;
+      margin: auto;
+      width: 700px;
+    }
+    #tribute-info {
+      margin: 2% auto;
+      width: 70%;
+    }
+    @media (max-width: 1000px) {
+      body {
+        font-size: 1em;
+      }
+      #main {
+        width: 90%;
+      }
+      #tribute-info {
+        width: 90%;
+      }
+      #tribute-info > ul {
+        margin: auto;
+        width: 100%;
+      }
+    }
+    #more-info {
+      margin: auto;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <p id="title">Swami Vivekananda</p>
+    <p>An Indian Hindu monk, a chief disciple of the 19th-century Indian mystic Ramakrishna</p>
+    <div id="img-div">
+      <!-- https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Swami_Vivekananda_at_Parliament_of_Religions.jpg/1280px-Swami_Vivekananda_at_Parliament_of_Religions.jpg -->
+      <img id="image" src="./Swami_Vivekananda_at_Parliament_of_Religions.jpg" alt="Vivekananda on the platform at the Parliament of Religions">
+      <div id="img-caption">Vivekananda on the platform at Parliament of Religions September 1893. On the platform (left to right) Virchand Gandhi, Anagarika Dharmapala, Swami Vivekananda and G. Bonet Maury.</div>
+    </div>
+    <div id="tribute-info">
+      <p>Here's the timeline of Swami Vivekananda's Life:</p>
+      <ul>
+        <li><strong>1863:</strong> Born Narendranath Datta at present-day's Kolkata, West Bengal, India</li>
+        <li><strong>1884:</strong> Became a member of a Freemasonry lodge and of the Sadharan Brahmo Samaj in his twenties</li>
+        <li><strong>1893:</strong> Visited several cities in Japan (including Nagasaki, Kobe, Yokohama, Osaka, Kyoto and Tokyo), China and Canada en route to the United States, reaching Chicago on 30 July 1893, where the "Parliament of Religions" took place in September 1893.</li>
+        <li><strong>1897:</strong> In Colombo he gave his first public speech in the East. From there on, his journey to Calcutta was triumphant.</li>
+        <li><strong>1899:</strong> left for the West for a second time in June 1899 accompanied by Sister Nivedita and Swami Turiyananda. Following a brief stay in England, he went to the United States. During this visit, Vivekananda established Vedanta Societies in San Francisco and New York and founded a shanti ashrama (peace retreat) in California.</li>
+        <li><strong>1902:</strong> 4 July 1902 (the day of his death)</li>
+        
+      </ul>
+    </div>
+    <p id="more-info">For more info on the life of Swami Vivekananda visit <a id="tribute-link" href="https://en.wikipedia.org/wiki/Swami_Vivekananda" target="_blank">this Wikipedia page</a></p>
+  </main>
+</body>
+<script src="../bundle.js"></script>
+</html>

@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey form</title>
+  <style>
+    body, #submit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 1.1em;
+      color: white;
+    }
+    body::before {
+      /* box-sizing: border-box; */
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      /* background: rgba(54, 15, 104, 0.5); */
+      background-image:  linear-gradient(rgba(54, 15, 104, 0.6), rgba(100, 29, 194, 0.6)), url("./survey-form--pexels-startup-stock-photos-7096.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    main {
+      max-width: 700px;
+      animation-name: fadeIn;
+      animation-duration: 700ms;
+      animation-timing-function: linear;
+    }
+    @keyframes fadeIn {
+      0% {
+        position: relative;
+        top: -50px;
+        opacity: 0;
+      }
+      100% {
+        position: relative;
+        top: 0;
+        opacity: 1;
+      }
+    }
+    header {
+      align-self: center;
+      text-align: center;
+    }
+    header p {
+      font-style: italic;
+    }
+    form {
+      padding: 40px;
+      background-color: rgba(54, 15, 104, 0.8);
+      color: inherit;
+      border-radius: 10px;
+    }
+    #form-group {
+      margin: 10px;
+    }
+    #form-group p {
+      margin-bottom: 5px;
+    }
+    #form-group label {
+      display: block;
+    }
+    #form-group input {
+      margin: 10px;
+      margin-left: auto;
+    }
+    #form-group p span {
+      font-size: 0.8em;
+    }
+    #name, #email, #number, #dropdown, #submit, #custom-prefer, textarea {
+      width: 100%;
+      font-size: 1.1em;
+      font-family: inherit;
+      margin: 5px auto;
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+    }
+    #custom-prefer {
+      width: 70%;
+      border: none;
+      border-bottom: 2px solid gray;
+    }
+    #submit {
+      background-color: rgb(78, 199, 78);
+      color: inherit;
+      border: none;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    #submit:hover {
+      background-color: rgb(70, 165, 70);
+    }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for taking time to help us improve</p>
+    </header>
+    <form id="survey-form" action="">
+      <div id="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Enter your Name" required>
+      </div>
+      <div id="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Enter your Email" required>
+      </div>
+      <div id="form-group">
+        <label id="number-label" for="number">Age</label>
+        <input id="number" type="number" name="number" min="10" max="99" placeholder="Enter your Age" required>
+      </div>
+      <div id="form-group">
+        <p>Which option best describes your current role?</p>
+        <select name="role" id="dropdown" required>
+          <option disabled selected value>Select current role</option>
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+          <option value="learner">Full Time Learner</option>
+          <option value="preferNo">Prefer not to Say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div id="form-group">
+        <p>Would you recommend freeCodeCamp to a friend</p>
+        <label><input type="radio" name="recommend" value="definitely" checked>Definitely</label>
+        <label><input type="radio" name="recommend" value="maybe">Maybe</label>
+        <label><input type="radio" name="recommend" value="not-sure">Not sure</label>
+      </div>
+      <div id="form-group">
+        <p>What would you like to see improved? <span>(check all that apply and suggest if any other)</span></p>
+        <label><input type="checkbox" name="prefer" value="front-end-courses">Front-End Courses</label>
+        <label><input type="checkbox" name="prefer" value="back-end-courses">Back-End Courses</label>
+        <label><input type="checkbox" name="prefer" value="videos">Videos</label>
+        <label><input type="checkbox" name="prefer" value="forum">Forum</label>
+        <label><input type="checkbox" name="prefer" value="meetups">City Meetups</label>
+        <label>Any other: <input type="text" name="custom-prefer" id="custom-prefer" /></label>
+      </div>
+      <div id="form-group">
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea name="comments" id="comments" cols="50" rows="5" placeholder="Enter your comments here..."></textarea>
+      </div>
+      <div id="form-group">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+<!-- <script src="/bundle.js"></script> -->
+</html>
