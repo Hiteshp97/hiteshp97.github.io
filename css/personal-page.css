@@ -46,6 +46,9 @@ main {
   justify-self: center;
   align-self: center;
 }
+#protfolio-section {
+  min-height: 90%;
+}
 #projects {
   text-align: center;
 }
