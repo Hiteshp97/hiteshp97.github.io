@@ -47,7 +47,7 @@ main {
   align-self: center;
 }
 #protfolio-section {
-  min-height: 90%;
+  min-height: 85vh;
 }
 #projects {
   text-align: center;
